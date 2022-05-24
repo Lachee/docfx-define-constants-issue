@@ -1,0 +1,71 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "src": "..",
+                    "files": [ "Scripts/**/*.cs" ]
+                }
+            ],
+            "globalNamespaceId": "Global",
+            "dest": "api",
+            "properties": {
+                "DefineConstants": "SOME_DEFINE=1"
+            }
+        }
+    ],
+    "build": {
+        "globalMetadata": {
+            "_appTitle": "Utilities",
+            "_appFooter": "MIT by Lachee",
+            "_enableSearch": true
+        },
+        "content": [
+            {
+                "files": [
+                    "toc.yml",
+                    "index.md"
+                ]
+            },
+            {
+                "src": "api",
+                "files": [
+                    "*.yml"
+                ],
+                "dest": "api"
+            },
+            {
+                "src": "manual",
+                "files": [
+                    "toc.yml",
+                    "*.md"
+                ],
+                "dest": "manual"
+            }
+        ],
+        "overwrite": [
+            {
+                "src": "..",
+                "files": [ "Scripts/**/*.md" ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [ "resources/**/*" ]
+            }
+        ],
+        "sitemap":
+        {
+            "baseUrl": "https://lachee.github.io/unity-utilities/",
+            "changefreq": "yearly",
+            "fileOptions": {
+                "api/*": {
+                    "changefreq": "daily"
+                }
+            }
+        },
+        "xref": [ "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml" ],
+        "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+        "dest": "../_site"
+    }
+}
